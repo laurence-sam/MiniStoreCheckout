@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Store Checkout System</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .container { max-width: 500px; margin: 0 auto; border: 1px solid #000; padding: 20px; }
+        label { display: inline-block; width: 130px; }
+        input, select { padding: 4px; width: 220px; margin: 4px 0; }
+        button { padding: 8px 16px; margin-top: 10px; }
+        #orderSummary { margin-top: 15px; font-family: monospace; white-space: pre-line; }
+        .error { color: red; margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>MINI STORE CHECKOUT SYSTEM</h3>
+
+        <label>Customer Name:</label>
+        <input type="text" id="customerName"><br><br>
+
+        <label>Number of Products:</label>
+        <input type="number" id="productCount" min="1"><br><br>
+
+        <div id="productsContainer"></div>
+
+        <label>Delivery Option:</label>
+        <select id="deliveryOption">
+            <option value="1">Store Pickup</option>
+            <option value="2">Standard Delivery</option>
+            <option value="3">Express Delivery</option>
+        </select><br><br>
+
+        <div id="validationMessage" class="error"></div>
+        <button id="calculateBtn">Calculate Order</button>
+
+        <h4>ORDER SUMMARY</h4>
+        <div id="orderSummary"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
